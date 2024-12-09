@@ -27,9 +27,9 @@ public class Rotation {
         );
 
         for(int i = 0; i < model.vertices.size(); i++){
-            model.vertices.set(i, matrixRx.multiplyByVector(model.vertices.get(i)));
-            model.vertices.set(i, matrixRy.multiplyByVector(model.vertices.get(i)));
             model.vertices.set(i, matrixRz.multiplyByVector(model.vertices.get(i)));
+            model.vertices.set(i, matrixRy.multiplyByVector(model.vertices.get(i)));
+            model.vertices.set(i, matrixRx.multiplyByVector(model.vertices.get(i)));
         }
 
         System.out.println("Операция поворота выполнена");

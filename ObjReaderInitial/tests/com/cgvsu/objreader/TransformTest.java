@@ -21,6 +21,16 @@ public class TransformTest {
     }
 
     @Test
+    public void scaleTest0(){
+        Vector3f vertices = new Vector3f(0,0,0);
+        Model model = new Model();
+        model.vertices.add(vertices);
+        Vector3f s = new Vector3f(4,5,6);
+        scale(model, s);
+        Assertions.assertTrue(model.vertices.get(0).equals(new Vector3f(0, 0, 0)));
+    }
+
+    @Test
     public void translationTest(){
         Vector3f vertices = new Vector3f(1,2,3);
         Model model = new Model();

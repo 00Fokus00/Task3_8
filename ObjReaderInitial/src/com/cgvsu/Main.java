@@ -28,13 +28,15 @@ public class Main {
         System.out.println("Normals: " + model.normals.size());
         System.out.println("Polygons: " + model.polygons.size());
 
-        trans(model, new Vector3f(10F, 0, 10F));
-        rotate(model, new Vector3f((float) Math.PI, 0, 0));
         scale(model, new Vector3f(3,1,1));
+
+        rotate(model, new Vector3f((float) (Math.PI), 0, (float) (0)));
+
+        trans(model, new Vector3f(10F, 0, 10F));
 
         ObjWriter objWriter = new ObjWriter();
 
-        objWriter.write(model, "C:/Users/iafil/OneDrive/Документы/course2/CG_Task_3/3DModels/Faceform/WrapHand1.obj");
+        objWriter.write(model, "C:/Users/iafil/OneDrive/Документы/course2/CG_Task_3/3DModels/Faceform/_WrapHand.obj");
 
     }
 }
