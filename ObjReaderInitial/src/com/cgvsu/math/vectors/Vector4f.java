@@ -86,6 +86,10 @@ public class Vector4f {
         return this.x * vector4f.getX() + this.y * vector4f.getY() + this.z * vector4f.getZ() + this.w * vector4f.getW();
     }
 
+    public Vector3f vector4To3(){
+        return new Vector3f(this.x, this.y, this.z);
+    }
+
     public float getX() {
         return x;
     }
